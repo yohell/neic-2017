@@ -1,0 +1,15 @@
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="spacing"></div>
+            {{ page.content }}
+        </div>
+
+        <div class="col-lg-4 col-lg-offset-1">
+            <div class="spacing"></div>
+            <h4>Session details</h4>
+            <div class="hline"></div>
+            <p><b>Session chair:</b> <a href="{{ site.baseurl }}/people/{{ page.chair | downcase | replace:' ','-' }}">{{ page.chair }}</a></p>
+        </div>
+    </div>
+</div>

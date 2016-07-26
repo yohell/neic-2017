@@ -1,0 +1,19 @@
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="spacing"></div>
+            {{ page.content }}
+        </div>
+
+        <div class="col-lg-4 col-lg-offset-1">
+            <div class="spacing"></div>
+            <h4>Workshop details</h4>
+            <div class="hline"></div>
+            <p><b>Date:</b> YYY</p>
+            <p><b>Time:</b> XXX</p>
+            <p><b>Location:</b> {{ page.location }}</p>
+            {% assign person = site.people | where: "name", page.chair  | first %}
+            <p><b>Session chair:</b> <a href="{{ site.baseurl }}/people/{{ person.name | downcase | replace:' ','-' }}">{{ person.name }}</a></p>
+        </div>
+    </div>
+</div>

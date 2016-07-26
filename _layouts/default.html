@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    {% include head.html %}
+
+    <body>
+        {% include navigation.html %}
+
+        <div id="blue">
+            <div class="container">
+                <div class="row">
+                    <h3>{{ page.title }}</h3>
+                </div>
+            </div>
+        </div>
+
+        {% if page.include %}
+            {% include {{ page.include }}.html %}
+        {% endif %}
+
+        {% include footer.html %}
+        {% include js.html %}
+    </body>
+</html>

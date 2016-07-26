@@ -1,0 +1,47 @@
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                <!-- indicators -->
+                <ol class="carousel-indicators">
+                    {% for image in page.images %}
+                        {% if forloop.index0 == 0 %}
+                            <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}" class="active"></li>
+                        {% else %}
+                            <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}"></li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+
+                <!-- wrapper for slides -->
+                <div class="carousel-inner">
+                    {% for image in page.images %}
+                        {% if forloop.index0 == 0 %}
+                            <div class="item active">
+                        {% else %}
+                            <div class="item">
+                        {% endif %}
+                            <a href="{{ site.baseurl }}/highlights/#highlight{{ forloop.index0 }}">
+                                <img width=100% src="{{ image.url }}" alt="{{ image.text }}">
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <!-- controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="spacing"></div>
+            {{ page.content }}
+        </div>
+    </div>
+</div>
