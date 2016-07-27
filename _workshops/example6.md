@@ -1,5 +1,5 @@
 ---
-layout: master
+layout: schedule
 include: workshop
 title: Bar
 chair: John Doe

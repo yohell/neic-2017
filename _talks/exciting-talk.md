@@ -1,5 +1,5 @@
 ---
-layout: master
+layout: schedule
 include: talk
 title: Exciting talk title
 speaker: John Doe

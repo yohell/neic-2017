@@ -1,5 +1,5 @@
 ---
-layout: master
+layout: schedule
 include: person
 name: John Doe
 organization: Google

@@ -1,5 +1,5 @@
 ---
-layout: master
+layout: schedule
 include: workshops
 title: Workshops
 permalink: /workshops/

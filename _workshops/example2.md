@@ -1,5 +1,5 @@
 ---
-layout: master
+layout: schedule
 include: workshop
 title: Example 2
 chair: John Doe
