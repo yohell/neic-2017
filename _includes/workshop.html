@@ -1,3 +1,17 @@
+{% for day in site.schedule %}
+    {% for section in day.sections %}
+        {% if section.type == 'workshop' %}
+            {% for session in section.sessions %}
+                {% if session.name == page.session %}
+                    {% assign day = day.day %}
+                    {% assign time = section.time %}
+                    {% assign room = session.room %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
 <div class="container mtb">
     <div class="row">
         <div class="col-lg-7">
@@ -9,9 +23,9 @@
             <div class="spacing"></div>
             <h4>Workshop</h4>
             <div class="hline"></div>
-            <p><b>Date:</b> YYY</p>
-            <p><b>Time:</b> XXX</p>
-            <p><b>Location:</b> {{ page.location }}</p>
+            <p><b>Date:</b> {{ day }}</p>
+            <p><b>Time:</b> {{ time }}</p>
+            <p><b>Room:</b> {{ room }}</p>
             {% assign person = site.people | where: "name", page.chair  | first %}
             <p><b>Session chair:</b> <a href="{{ site.baseurl }}/people/{{ person.name | downcase | replace:' ','-' }}">{{ person.name }}</a></p>
         </div>
