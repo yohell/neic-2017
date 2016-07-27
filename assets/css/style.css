@@ -362,6 +362,21 @@ a:focus {
 ################################################################# */
 /* General Tweaks */
 
+
+
+#session_title
+{
+    font-size: 30px;
+}
+
+#session_type
+{
+    color: #cccccc;
+    display: inline;
+}
+
+
+
 #violet {
 	background: #f2defc;
 	margin-top: 60px;
