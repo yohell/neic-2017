@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: master
 include: workshop
 title: Name with spaces
 chair: John Doe

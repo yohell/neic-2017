@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: master
 include: workshop
 title: Example 2
 chair: John Doe

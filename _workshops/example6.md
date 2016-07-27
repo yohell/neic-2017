@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: master
 include: workshop
 title: Bar
 chair: John Doe

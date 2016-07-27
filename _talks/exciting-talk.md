@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: master
 include: talk
 title: Exciting talk title
 speaker: John Doe

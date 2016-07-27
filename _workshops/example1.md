@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: master
 include: workshop
 title: Galaxy
 chair: John Doe

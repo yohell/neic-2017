@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: master
 include: person
 name: John Doe
 organization: Google

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: master
 include: gallery
 title: Image Gallery
 permalink: /gallery/
