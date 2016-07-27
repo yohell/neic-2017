@@ -80,3 +80,5 @@ collections:
   talks:
     output: true
     permalink: /talks/:path/
+  schedule:
+    output: false
