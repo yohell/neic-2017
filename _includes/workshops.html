@@ -1,12 +1,26 @@
 <div class="container mtb">
     <div class="row">
         <div class="col-lg-12">
+            <h2>
+                List of workshops
+            </h2>
             <div class="spacing"></div>
             <ul>
-                {% for workshop in site.workshops %}
-                    <li>
-                        <a href="{{ site.baseurl }}{{ workshop.permalink }}">{{ workshop.title }}</a>
-                    </li>
+                {% for day in site.schedule %}
+                    {% for section in day.sections %}
+                        {% if section.type == 'workshop' %}
+                            {% for session in section.sessions %}
+                                <li>
+                                {% for workshop in site.workshops %}
+                                     {% if workshop.session == session.name %}
+                                         <a href="{{ site.baseurl }}{{ workshop.permalink }}">{{ workshop.title }}</a>
+                                     {% endif %}
+                                {% endfor %}
+                                    ({{ day.day}}, {{ section.time}}, Room {{ session.room}})
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
             </ul>
         </div>
