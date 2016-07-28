@@ -27,5 +27,20 @@
             <p><div class="highlight">Time:</div> {{ time }}</p>
             <p><div class="highlight">Session chair:</div> <a href="{{ site.baseurl }}/people/{{ page.chair | downcase | replace:' ','-' }}">{{ page.chair }}</a></p>
         </div>
+
+        <div class="col-lg-12">
+            <h3>Talks</h3>
+            <ul>
+                {% for talk in site.talks %}
+                     {% if talk.session == page.session %}
+                         <li>
+                             <a href="{{ site.baseurl }}{{ talk.permalink }}">{{ talk.title }}</a>
+                             <br>
+                             Speaker: <a href="{{ site.baseurl }}/people/{{ talk.speaker | downcase | replace:' ','-' }}">{{ talk.speaker }}</a>
+                         </li>
+                     {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>
