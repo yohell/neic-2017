@@ -4,14 +4,7 @@
 
     <body>
         {% include navigation.html %}
-
-        <div id="violet">
-            <div class="container">
-                <div class="row">
-                    {% include schedule_navigation.html %}
-                </div>
-            </div>
-        </div>
+        {% include schedule_navigation.html %}
 
         {% if page.include %}
             {% include {{ page.include }}.html %}
