@@ -15,11 +15,11 @@ main:
         text: 'Overview'
       - url: '/people/'
         text: 'Speakers and session chairs'
-      - url: '/404/'
+      - url: '/talks/'
         text: 'Talks'
       - url: '/workshops/'
         text: 'Workshops'
-      - url: '/404/'
+      - url: '/sessions/'
         text: 'Conference sessions'
   - section: 'Venue'
     links:
