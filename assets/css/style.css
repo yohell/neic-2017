@@ -9,13 +9,20 @@
 	URL: http://alvarez.is
 
 ################################################################# */
-@import url(//fonts.googleapis.com/css?family=Raleway:400,700,900);
 
+
+/*
+ * fonts
+ */
+
+@import url(//fonts.googleapis.com/css?family=Raleway:400,700,900);
 @import url(//fonts.googleapis.com/css?family=Lato:400,900);
 
-/*	################################################################
-	1. GENERAL STRUCTURES
-################################################################# */
+
+/*
+ * structures
+ */
+
 * {
     margin: 0;
     padding: 0px;
@@ -341,7 +348,11 @@ a:focus {
     margin-bottom: 60px;
 }
 
-/* Footer */
+
+/*
+ * footer
+ */
+
 #footerwrap {
     padding-top: 20px;
     padding-bottom: 60px;
@@ -366,19 +377,23 @@ a:focus {
     color: #00b3fe
 }
 
-/*	################################################################
-	PAGE CONFIGURATIONS
-################################################################# */
-/* General Tweaks */
 
+/*
+ * tweaks
+ */
 
-
-#session_title {
-    font-size: 30px;
+.spacing {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-#session_type {
+.lowlight {
     color: #cccccc;
+    display: inline;
+}
+
+.highlight {
+    font-weight: 700;
     display: inline;
 }
 
@@ -393,9 +408,4 @@ a:focus {
 #violet h3 {
      /* color: white; */
     margin-left: 15px;
-}
-
-.spacing {
-    margin-top: 40px;
-    margin-bottom: 40px;
 }

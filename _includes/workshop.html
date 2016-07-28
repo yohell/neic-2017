@@ -12,13 +12,15 @@
     {% endfor %}
 {% endfor %}
 
+{% assign person = site.people | where: "name", page.chair  | first %}
+
 <div class="container mtb">
     <div class="row">
         <div class="col-lg-12">
-            <div id="session_title">
-                <div id="session_type">Workshop:</div>
+            <h2>
+                <div class="lowlight">Workshop:</div>
                 {{ page.title }}
-            </div>
+            </h2>
         </div>
 
         <div class="col-lg-6">
@@ -26,11 +28,10 @@
         </div>
 
         <div class="col-lg-6">
-            <p><b>Date:</b> {{ day }}</p>
-            <p><b>Time:</b> {{ time }}</p>
-            <p><b>Room:</b> {{ room }}</p>
-            {% assign person = site.people | where: "name", page.chair  | first %}
-            <p><b>Session chair:</b> <a href="{{ site.baseurl }}/people/{{ person.name | downcase | replace:' ','-' }}">{{ person.name }}</a></p>
+            <p><div class="highlight">Date:</div> {{ day }}</p>
+            <p><div class="highlight">Time:</div> {{ time }}</p>
+            <p><div class="highlight">Room:</div> {{ room }}</p>
+            <p><div class="highlight">Session chair:</div> <a href="{{ site.baseurl }}/people/{{ person.name | downcase | replace:' ','-' }}">{{ person.name }}</a></p>
         </div>
     </div>
 </div>
