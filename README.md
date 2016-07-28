@@ -1,6 +1,6 @@
 # NeIC 2017 conference page mockup
 
-## Design decisions
+### Design decisions
 
 - Jekyll to leverage GitHub pages
 - GitHub to simplify contributions
